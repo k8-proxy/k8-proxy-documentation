@@ -1,7 +1,6 @@
 ---
-id: #gwfiledrop-overview
 title: gwfiledrop Overview
-sidebar_label: gwfiledrop Overview
+sidebar_label: Overview
 ---
 
 see [Development Websites Dashboard for details](../../dashboards/websites/development.md)

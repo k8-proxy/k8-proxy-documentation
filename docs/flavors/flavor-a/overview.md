@@ -1,10 +1,9 @@
 ---
-#id: flavor-a-overview
 title: Flavor A Overview
-sidebar_label: Flavor A Overview
+sidebar_label: Overview
 ---
 
-[Release Notes](../flavor-a/release-notes-history.md)
+[Release Notes](../flavor-a/release-notes/history.md)
 
 [Architecture](../flavor-a/technical-architecture.md)
 

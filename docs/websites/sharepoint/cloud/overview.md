@@ -1,7 +1,6 @@
 ---
-#id: sharepoint-cloud-overview
 title: Sharepoint Cloud Overview
-sidebar_label: Sharepoint Cloud Overview
+sidebar_label: Overview
 ---
 
 see [Development Websites Dashboard for details](../../../dashboards/websites/development.md)

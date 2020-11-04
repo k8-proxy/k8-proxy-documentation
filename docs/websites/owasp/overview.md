@@ -1,7 +1,6 @@
 ---
-#id: owasp-overview
 title: owasp Overview
-sidebar_label: owasp Overview
+sidebar_label: Overview
 ---
 
 see [Development Websites Dashboard for details](../../dashboards/websites/development.md)

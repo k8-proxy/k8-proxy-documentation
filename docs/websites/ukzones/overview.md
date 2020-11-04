@@ -1,7 +1,6 @@
 ---
-#id: ukzones-overview
 title: ukzones Overview
-sidebar_label: ukzones Overview
+sidebar_label: Overview
 ---
 
 see [Development Websites Dashboard for details](../../dashboards/websites/production.md)

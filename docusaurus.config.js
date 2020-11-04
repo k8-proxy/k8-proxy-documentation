@@ -2,9 +2,9 @@ module.exports = {
   title: "K8 Proxy Documentation",
   tagline: "",
   url: "https://k8-proxy.github.io",
-  baseUrl: "/",
+  baseUrl: "/k8-proxy-documentation/",
   favicon: "img/favicon.ico",
-  organizationName: "filetrust", // Usually your GitHub org/user name.
+  organizationName: "k8-proxy", // Usually your GitHub org/user name.
   projectName: "k8-proxy-documentation", // Usually your repo name.
   onBrokenLinks: 'log',
   themeConfig: {

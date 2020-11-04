@@ -38,8 +38,19 @@ module.exports = {
 		[
 			{					
 				"SharePoint": [	
-					"websites/sharepoint/cloud/overview",
-					"websites/sharepoint/self-hosted/overview",				
+					{
+						"cloud":
+						[
+							"websites/sharepoint/cloud/overview",
+							"websites/sharepoint/cloud/file-handler"
+						],
+						"self-hosted":
+						[
+							"websites/sharepoint/self-hosted/overview",
+							"websites/sharepoint/self-hosted/manual-install",
+							"websites/sharepoint/self-hosted/http-module",							
+						],	
+					}			
 				],
 				"gov.uk": [	
 				"websites/gov.uk/overview",

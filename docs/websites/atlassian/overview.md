@@ -1,7 +1,6 @@
 ---
-id: #atlassian-overview
 title: atlassian Overview
-sidebar_label: atlassian Overview
+sidebar_label: Overview
 ---
 
 see [Development Websites Dashboard for details](../../dashboards/websites/development.md)

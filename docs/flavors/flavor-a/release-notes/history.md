@@ -1,7 +1,6 @@
 ---
-#id: flavor-a-release-notes-history
 title: Flavor A Release Notes History
-sidebar_label: Flavor A Release Notes History
+sidebar_label: Release Notes History
 ---
 
 |Version|Date|Summary|

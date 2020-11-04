@@ -1,7 +1,6 @@
 ---
-#id: sharepoint-self-hosted-overview
 title: Sharepoint Self-Hosted Overview
-sidebar_label: Sharepoint Self-Hosted Overview
+sidebar_label: Overview
 ---
 
 see [Development Websites Dashboard for details](../../../dashboards/websites/development.md)

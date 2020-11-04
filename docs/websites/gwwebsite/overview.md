@@ -1,7 +1,6 @@
 ---
-id: #gwwebsite-overview
 title: gwwebsite Overview
-sidebar_label: gwwebsite Overview
+sidebar_label: Overview
 ---
 
 see [Development Websites Dashboard for details](../../dashboards/websites/production.md)

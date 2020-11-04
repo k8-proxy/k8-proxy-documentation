@@ -1,7 +1,6 @@
 ---
-id: #fortinet-overview
 title: fortinet Overview
-sidebar_label: fortinet Overview
+sidebar_label: Overview
 ---
 
 see [Development Websites Dashboard for details](../../dashboards/websites/development.md)

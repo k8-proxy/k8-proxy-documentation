@@ -1,10 +1,9 @@
 ---
-id: #msrb-overview
 title: msrb Overview
-sidebar_label: msrbOverview
+sidebar_label: Overview
 ---
 
-see [Development Websites Dashboard for details](../../../dashboards/websites/production.md)
+see [Development Websites Dashboard for details](../../dashboards/websites/production.md)
 
 ## Installation Guide
 

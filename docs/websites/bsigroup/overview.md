@@ -1,7 +1,6 @@
 ---
-id: #bsigroup-overview
 title: bsigroup Overview
-sidebar_label: bsigroup Overview
+sidebar_label: Overview
 ---
 
 see [Development Websites Dashboard for details](../../dashboards/websites/development.md)

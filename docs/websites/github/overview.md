@@ -1,7 +1,6 @@
 ---
-id: #github-overview
 title: github Overview
-sidebar_label: github Overview
+sidebar_label: Overview
 ---
 
 see [Development Websites Dashboard for details](../../dashboards/websites/development.md)

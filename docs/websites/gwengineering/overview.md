@@ -1,7 +1,6 @@
 ---
-id: #gwengineering-overview
 title: gwengineering Overview
-sidebar_label: gwengineering Overview
+sidebar_label: Overview
 ---
 
 see [Development Websites Dashboard for details](../../dashboards/websites/production.md)
