@@ -18,7 +18,9 @@ jobs:
       run: yarn
    
     - name: Build 🧱
-      run: yarn build
+      run: | 
+           yarn
+           yarn add terser-webpack-plugin@^4.1.0 -D
     
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@releases/v3
