@@ -225,7 +225,13 @@ if (file_put_contents($output_file_path, $base64_string_output)) {
 
 
 # JavaScript
+
+ The following code snippets are examples of calling the GW Cloud SDK using JavaScript. The requests library is used to execute calls to the API.
+
 ## Process File
+
+In this example, files are loaded from the OS and a request with the content type of ‘application/json’ is formed. The request is then sent to the API using the POST method.
+The rebuilt file is returned as a file, decoded by the client and written to disk.
 
 ```const fs = require('fs');
 const request = require('request');
@@ -262,6 +268,9 @@ const processFile = async () => {
 module.exports = { processFile };
 ```
 ## Process Zip
+
+In this example, files are loaded from the OS and a request with the content type of ‘application/json’ is formed. The request is then sent to the API using the POST method.
+The rebuilt file is returned as zip file, decoded by the client and written to disk.
 ```
 const fs = require('fs');
 const request = require('request');
@@ -298,6 +307,9 @@ const processZip = async () => {
 module.exports = { processZip };
 ```
 ## Process Base64
+
+In this example, files are loaded from the OS and a request with the content type of ‘application/json’ is formed. The request is then sent to the API using the POST method.
+The rebuilt file is returned as Base64, decoded by the client and written to disk.
 
 ```
 const fs = require('fs');
