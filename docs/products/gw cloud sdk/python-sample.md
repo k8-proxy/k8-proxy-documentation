@@ -11,6 +11,7 @@ import TabItem from '@theme/TabItem';
   values={[
     {label: 'Python', value: 'python'},
     {label: 'PHP', value: 'php'},
+    {label: 'JS', value:'js'},
   ]}>
   <TabItem value="python">
 
@@ -19,8 +20,7 @@ import TabItem from '@theme/TabItem';
 The following code snippets are examples of calling the GW Cloud SDK using Python. The requests library is used to execute calls to the API.
 
 ## api/rebuild/base64
-​In this example, files are loaded from the OS and a request with the content type of 'application/json' is formed. The request is then sent to the API using the POST method. The JSON body also contains the content management flags.
-
+​In this example, files are loaded from the OS and a request with the content type of 'application/json' is formed. The request is then sent to the API using the POST method. 
 The rebuilt file is returned as Base64, decoded by the client and written to disk.
 
 ```
@@ -168,7 +168,7 @@ for root, dirs, files in os.walk(directory):
 The following code snippets are examples of calling the GW Cloud SDK using php. The requests library is used to execute calls to the API.
 
 ## api/rebuild/base64 using php
-​In this example, files are loaded from the OS and a request with the content type of 'application/json' is formed. The request is then sent to the API using the POST method. The JSON body also contains the content management flags.
+​In this example, files are loaded from the OS and a request with the content type of 'application/json' is formed. The request is then sent to the API using the POST method.
 
 The rebuilt file is returned as Base64, decoded by the client and written to disk.
 
@@ -224,3 +224,114 @@ if (file_put_contents($output_file_path, $base64_string_output)) {
 </Tabs>
 
 
+# JS
+## Process File
+
+```const fs = require('fs');
+const request = require('request');
+​
+const apiUrl = 'https://<host>:<port>/api/rebuild/file';
+const inputFilePath = './data/gw.pdf';
+const cleanFilePath = './data/clean.pdf';
+​
+const processFile = async () => {
+    return new Promise(function (resolve, reject) {
+        const options = {
+            method: "POST",
+            url: apiUrl,
+            headers: {
+                "Content-Type": "multipart/form-data"
+            },
+            formData: {
+                "file": fs.createReadStream(inputFilePath)
+            },
+            encoding: null
+        };
+​
+        request(options, function (err, res, response) {
+            if (!err && res.statusCode == 200) {
+                fs.writeFileSync(cleanFilePath, response);
+                resolve(true);
+            } else {
+                reject(err);
+            }
+        });
+    });
+}
+​
+module.exports = { processFile };
+```
+## Process Zip
+```
+const fs = require('fs');
+const request = require('request');
+​
+const apiUrl = 'https://<host>:<port>/api/rebuild/zipfile';
+const inputFilePath = './data/gw.zip';
+const cleanFilePath = './data/clean.zip';
+​
+const processZip = async () => {
+    return new Promise(function (resolve, reject) {
+        const options = {
+            method: "POST",
+            url: apiUrl,
+            headers: {
+                "Content-Type": "multipart/form-data"
+            },
+            formData: {
+                "file": fs.createReadStream(inputFilePath)
+            },
+            encoding: null
+        };
+​
+        request(options, function (err, res, response) {
+            if (!err && res.statusCode == 200) {
+                fs.writeFileSync(cleanFilePath, response);
+                resolve(true);
+            } else {
+                reject(err);
+            }
+        });
+    });
+}
+​
+module.exports = { processZip };
+```
+## Process Base64
+
+```
+const fs = require('fs');
+const request = require('request');
+​
+const apiUrl = 'https://<host>:<port>/api/rebuild/base64';
+const inputFilePath = './data/gw.pdf';
+const cleanFilePath = './data/clean.pdf';
+​
+const processBase64 = async () => {
+    return new Promise(function (resolve, reject) {
+        const contents = fs.readFileSync(inputFilePath, { encoding: 'base64' });
+        const options = {
+            method: "POST",
+            url: apiUrl,
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: {
+                base64: contents
+            },
+            json: true
+        };
+​
+        request(options, function (err, res, response) {
+            if (!err && res.statusCode == 200) {
+                fs.writeFileSync(cleanFilePath, response, { encoding: 'base64' });
+                resolve(true);
+            } else {
+                reject(err);
+            }
+        });
+    });
+}
+​
+module.exports = { processBase64 };
+```

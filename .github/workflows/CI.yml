@@ -15,7 +15,9 @@ jobs:
     - uses: actions/setup-node@v1
 
     - name: Installation ⏳
-      run: yarn
+      run: | 
+           yarn
+           yarn add terser-webpack-plugin@^4.1.0 -D
    
     - name: Build 🧱
       run: yarn build
