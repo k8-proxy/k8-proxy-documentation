@@ -1,6 +1,6 @@
 ---
-title: Python/PHP Code Sample
-sidebar_label: Python/PHP Code Sample
+title: Python/PHP/JS Code Sample
+sidebar_label: Python/PHP/JS Code Sample
 ---
 
 import Tabs from '@theme/Tabs';
@@ -11,7 +11,7 @@ import TabItem from '@theme/TabItem';
   values={[
     {label: 'Python', value: 'python'},
     {label: 'PHP', value: 'php'},
-    {label: 'JS', value:'js'},
+    {label: 'JavaScript', value:'js'},
   ]}>
   <TabItem value="python">
 
@@ -224,7 +224,7 @@ if (file_put_contents($output_file_path, $base64_string_output)) {
 </Tabs>
 
 
-# JS
+# JavaScript
 ## Process File
 
 ```const fs = require('fs');
