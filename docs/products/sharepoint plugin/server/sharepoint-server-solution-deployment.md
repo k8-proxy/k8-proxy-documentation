@@ -76,8 +76,8 @@ Ex: cd C:\Users\USERNAME\Downloads\Glasswall.FileHandler
    - Note: If **Central Administration** cannot be started, make sure that SQL Server is running (navigate to Start > search for Services and in the list of services search the ones starting with SQL. Make sure they all have **running** status).
    - Starting **Central Administration** will open your Browser and load `http://sps2019-plugin/` URL
 2. Once page is loaded, new section, in left bar menu, will be created called **Glasswall**. Click on Glasswall section.
-3. Set the Glasswall Rebuild API URL & Access Key. 
-- NOTE: Add `/Rebuild/base64` in the end of the provided Glasswall Rebuild API URL
+3. Set the Glasswall GW Cloud SDK URL & Access Key. 
+- NOTE: Add `/Rebuild/base64` in the end of the provided Glasswall GW Cloud SDK URL
 5. Save the configuration.
 
 #### Verify Solution

@@ -37,7 +37,7 @@ sidebar_label: Deploying ICAP Server on AWS
         ```
 
 - [Setup AWS Console access](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html)
-    - From CMD run: `aws configure`. 
+    - From CMD run: `aws configure` 
     - Enter the data for values as they pop up.
         ```
         example:
@@ -46,7 +46,7 @@ sidebar_label: Deploying ICAP Server on AWS
             Default region name [None]: eu-west-1
             Default output format [None]: json
         ```
-- If your have MFA token enabled for authentication to AWS account you should [set up MFA token authenticate through AWS CLI](https://aws.amazon.com/premiumsupport/knowledge-center/authenticate-mfa-cli/)
+- If you have MFA token enabled for authentication to AWS account, you should [set up MFA token authenticate through AWS CLI](https://aws.amazon.com/premiumsupport/knowledge-center/authenticate-mfa-cli/).
     - Run: `aws sts get-session-token --serial-number arn-of-the-mfa-device --token-code code-from-token`
     - Replace arn-of-the-mfa-device with your username and AWS number and enter MFA code as code-from-token 
     - Then export the values

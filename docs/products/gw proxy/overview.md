@@ -31,7 +31,7 @@ We needed to check the website requests to check domains of interest, (domains t
 
 ### Finding domains of interest
 
-- Open a browser that included dev tools (i.e : **Mozilla Firefox**)
+- Open a browser that included dev tools (i.e: **Mozilla Firefox**)
 
 - Open dev tools and switch to **Network** tab (CTRL+SHIFT+E in **Firefox**)
 
@@ -41,7 +41,7 @@ We needed to check the website requests to check domains of interest, (domains t
 
 ### Configuration
 
-Use [this configuration file](https://github.com/k8-proxy/k8-reverse-proxy/blob/master/stable-src/gwproxy.env) as example
+Use [this configuration file](https://github.com/k8-proxy/k8-reverse-proxy/blob/master/stable-src/gwproxy.env) as an example
 
 - `ROOT_DOMAIN`: Domain used by the proxy (example: www.gov.uk.glasswall-icap.com is proxying www.gov.uk) 
 
@@ -49,7 +49,7 @@ Use [this configuration file](https://github.com/k8-proxy/k8-reverse-proxy/blob/
 
 - `SQUID_IP` IP address of squid proxy, used by nginx, should be only changed on advanced usage of the docker image (example: Kubernetes)
 
-- `SUBFILTER_ENV`: Space separated text substitution rules in response body, foramtted as **match,replace** , used for url rewriting as in **.gov.uk,.gov.uk.glasswall-icap.com**
+- `SUBFILTER_ENV`: Space separated text substitution rules in response body, formatted as **match,replace**, used for URL rewriting as in **.gov.uk,.gov.uk.glasswall-icap.com**
 
 - `ICAP_URL`: ICAP server endpoint. 
 
@@ -96,21 +96,21 @@ Use [this configuration file](https://github.com/k8-proxy/k8-reverse-proxy/blob/
   
   ## Client configuration
 
-- Add hosts records to your client system hosts file ( i.e **Windows**: C:\Windows\System32\drivers\etc\hosts , **Linux, macOS and  Unix-like:** /etc/hosts ) as follows
+- Add hosts records to your client system hosts file (i.e **Windows**: C:\Windows\System32\drivers\etc\hosts - **Linux, macOS and Unix-like:** /etc/hosts) as follows:
   
   ```
   127.0.0.1 www.adarma.com.glasswall-icap.com adarma.com.glasswall-icap.com cdn1.adarma.com.glasswall-icap.com
   ```
   
-  In case the machine running the project is not your local computer, replace **127.0.0.1** with the project host IP,
+  In case the machine running the project is not your local computer, replace **127.0.0.1** with the project host IP.
   
-  make sure that tcp ports **80** and **443** are reachable and not blocked by firewall.
+  Make sure that tcp ports **80** and **443** are reachable and not blocked by firewall.
   
   ## Setting up cert for proxied site
   - all domains from **ALLOWED_DOMAINS** should be added to DNS for this setup
-  -   ```bash 
+      ```bash 
         docker-compose down
-        ```
+    ```
   - SSH into the instance for proxied site and run
       ```bash 
         sudo apt update

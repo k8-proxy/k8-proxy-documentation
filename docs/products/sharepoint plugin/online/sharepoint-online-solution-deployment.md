@@ -6,7 +6,7 @@ sidebar_label: Sharepoint Online Solution Deployment
 This section will outline how to go about installing Glasswall SharePoint solutions to your environment. Glasswall SharePoint solution is offered in 2 flavors. They are:
 
 - **Glasswall - SharePoint Online - Solution**
-- **Glasswall - SharePoint Server - Solution** - [link](./../server/sharepoint-server-solution-deployment.md)
+- **Glasswall - SharePoint Server - Solution** - [link](https://k8-proxy.github.io/k8-proxy-documentation/docs/products/sharepoint%20plugin/server/sharepoint-server-solution-deployment)
 
 ## Glasswall - SharePoint Online - Solution Deployment
 
@@ -20,9 +20,9 @@ Both components need to be deployed to your environments (M365 + Azure) as descr
 
 - You have setup your Microsoft account (M365 + Azure).
 - You have setup [Azure subscription](https://docs.microsoft.com/en-us/azure/cost-management-billing/manage/create-subscription).
-- Note: You can use 30-day free trial option by setting up account following [steps](https://signup.microsoft.com/Signup?OfferId=B07A1127-DE83-4a6d-9F85-2C104BDAE8B4&dl=ENTERPRISEPACK&culture=en-US&country=US&ali=1). This will setup both Sharepoint and Azure account, accessible on:
-    - Sharepoint: `https://<yourTenant>.sharepoint.com/`
-    - Azure: `https://portal.azure.com/`
+- **Note**: You can use 30-day free trial option by setting up account following [steps](https://signup.microsoft.com/Signup?OfferId=B07A1127-DE83-4a6d-9F85-2C104BDAE8B4&dl=ENTERPRISEPACK&culture=en-US&country=US&ali=1). This will setup both Sharepoint and Azure account, accessible on:
+    - **Sharepoint**: `https://<yourTenant>.sharepoint.com/`
+    - **Azure**: `https://portal.azure.com/`
 
 ### GW SPO Extension Deployment 
 Following are the steps to deploy GW SPO Extension:
@@ -75,7 +75,7 @@ Following are the steps to deploy GW FileHandler web app:
 2. Create a resource group. For r.g. rg-glasswallfilehandler-prod
 3. Create a new web app with appropriate plan by selecting resource group created in step 2, clicking on `Add` button in top toolbar and selecting `Web App` from the list.
 4. For runtime stack choose `.Net 5`
-5. Carefully select proper plan. For test you can go with `Free sku and size`, last option.
+5. Carefully select proper plan. For test, you can go with `Free sku and size`, last option.
 6. Example name for web app can be: **app-glasswallfilehandler-prod**. Once the web app is created, make a note of the URI. For e.g. https://app-glasswallfilehandler-prod.azurewebsites.net
 
 #### 3. Register a new application
@@ -136,8 +136,8 @@ Following application settings of FileHandler web app configuration needs to be 
 2. AzureAd:ClientSecret - Client Secret created in App registered with Azure Active Directory 
 3. AzureAd:Domain - Domain of your O365 subscription. For e.g. glasswall.onmicrosoft.com.
 4. AzureAd:TenantId - Tenant id of your Azure Active Directory tenant.  
-5. Glasswall:BaseUrl - Base url of your Glasswall rebuild api endpoint. Make sure you are using valid URL.
-6. Glasswall:ApiKey - Api Key to access the Glasswall rebuild api (can be found [here](https://glasswall-store.com/products/glasswall-rebuild-cloud-in-shared-cloud-environment?variant=33739907006604)).
+5. Glasswall:BaseUrl - Base url of your Glasswall GW Cloud SDK endpoint. Make sure you are using valid URL.
+6. Glasswall:ApiKey - Api Key to access the Glasswall GW Cloud SDK (can be found [here](https://glasswall-store.com/products/glasswall-rebuild-cloud-in-shared-cloud-environment?variant=33739907006604)).
 
 #### 6. Deploy FileHandler Code
 1. Navigate to local folder where GWO365FileHandlerWebApp.zip was downloaded (from [FileHandler release](https://github.com/k8-proxy/gp-sharepoint-plugins/releases)).
@@ -152,7 +152,7 @@ az webapp deployment source config-zip --resource-group <group-name> --name <app
 
 1. Clean cache
     - File handlers are cached locally in the browser and on the server. These caches have a timeout of 24 hours, meaning it can take up to 48 hours for updates to a File Handler manifest to appear for users. More details about this can be found [here](https://docs.microsoft.com/en-us/onedrive/developer/file-handlers/reset-cache?view=odsp-graph-online).
-    - In case you want to test your changes in less then 24h you will need to clean cache. While being authenticate to your sharepoint account in new tab, run: `https://{tenant}-my.sharepoint.com/_api/v2.0/drive/apps?forceRefresh=1`
+    - In case you want to test your changes in less then 24h, you will need to clean cache. While being authenticate to your sharepoint account in new tab, run: `https://{tenant}-my.sharepoint.com/_api/v2.0/drive/apps?forceRefresh=1`
     - Navigate to your sharepoint `https://{tenant}.sharepoint.com/` and from dev console, clean local and session storage cache.
     - Navigate to your oneDrive `https://{tenant}-my.sharepoint.com/` and from dev console, clean local and session storage cache.
     - Close your Browser.
@@ -169,7 +169,7 @@ az webapp deployment source config-zip --resource-group <group-name> --name <app
 4. Select any file. 
 5. Verify custom Download button is present. 
 6. Download the file.
-   - In case you are not able to **Download** file, verify that correct Glasswall Rebuild URL and Rebuild API are set in section 5.
+   - In case you are not able to **Download** file, verify that correct Glasswall Rebuild URL and GW Cloud SDK are set in section 5.
 8. Verify that downloaded file is rebuilt by Glasswall (you can upload file to `https://file-drop.co.uk` and verify it comes clean).
    - If the file is not rebuild correctly, the issue has to do with Glasswall Rebuild rather than solution provided.
 
@@ -179,7 +179,7 @@ az webapp deployment source config-zip --resource-group <group-name> --name <app
 - Safari (Mac)
 
 #### Repository
-- File Handler : [https://github.com/k8-proxy/gp-sharepoint-plugins/tree/main/Online/glasswall.o365.filehandler/Net5](https://github.com/k8-proxy/gp-sharepoint-plugins/tree/main/Online/glasswall.o365.filehandler/Net5).
+- File Handler: [https://github.com/k8-proxy/gp-sharepoint-plugins/tree/main/Online/glasswall.o365.filehandler/Net5](https://github.com/k8-proxy/gp-sharepoint-plugins/tree/main/Online/glasswall.o365.filehandler/Net5).
 
 #### Deployment Video
 

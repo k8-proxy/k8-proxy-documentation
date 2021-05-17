@@ -26,13 +26,28 @@ GW Cloud SDK is a Kubernetes service that can be added to ICAP infrastructure to
 
 ## Dataflow Diagram
 
-![image](https://user-images.githubusercontent.com/60857664/115525847-c4295c00-a28f-11eb-9754-6cd5b945f138.png)
+![image](https://github.com/k8-proxy/cs-k8s-api/blob/main/images/gw-cloud-sdk-dataflow-diagram.png?raw=true)
 
 ## Glasswall Cloud SDK with Compliant Kubernetes
 
 ![image](https://user-images.githubusercontent.com/60857664/115548813-2f7f2800-a2a8-11eb-8ba3-e7569db39fe0.png)
 
 
+# Supported File Types
+
+| File Types | File Description |
+| --- | --- |
+| PDF | Adobe Portable Document |
+| JPG GIF PNG EMF WMF TIFF GeoTIFF BMP | Images |
+| DOC DOT | MS Word 97-2003 |
+| XLS XLT | MS Excel 97-2003 |
+| PPT POT | MS PowerPoint 97-2003 |
+| DOCX DOCM DOTX DOTM | MS Word 2003 & later |
+| XLSX XLAM XLSM XLTX XLTM | MS Excel 2003 & later |
+| XPPTX POTX POTM PPTM PPSX PPAM PPSM | MS PowerPoint 2003 & later |
+| WAV MP3 | Audio |
+| MPG MP4 | Video |
+| PE DLL MUI EXE MACH-0 COFF ELF | Portable executables |
 
 # Demos
 

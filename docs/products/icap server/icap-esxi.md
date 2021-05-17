@@ -20,7 +20,7 @@ From VMWare ESXi console or VMware workstation:
 - Start the VM and login with provided credentials
 - Run `/usr/local/bin/wizard` 
    - Configure Network > Change IP, Gateway, and DNS (navigate using up down buttons, then tab to go to submit)
-     - Note: To set up your OVA **without internet access**, for `DNS`, enter the same IP as your VM IP
+     - **Note**: To set up your OVA **without internet access**, for `DNS`, enter the same IP as your VM IP
    - Give the VM ~10 minutes before jumping to usage
    - Configure Password > Type new password 
 
@@ -29,7 +29,7 @@ From VMWare ESXi console or VMware workstation:
 
 - Download ICAP Server OVA
 - Open VirtualBox and Import downloaded OVA minimum (8GB RAM, 2 Cores, and 20 GB disk)
-    - to increase disk size, `Ctrl+D` > Pick your ICAP-Server VM > Properties > Increase size
+    - To increase disk size, `Ctrl+D` > Pick your ICAP-Server VM > Properties > Increase size
     - Give the VM ~10 minutes before jumping to usage
 
 ## Troubleshooting

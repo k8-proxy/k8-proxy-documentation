@@ -10,11 +10,11 @@ The Sharepoint Server plugin allows to delegate all download and uploads activit
 
 ## Removing File Handler Plugin
 
-1. To remove the File Handler, firstly we need to identify whether the application plugin has been installed on the machine or not. To identify the installation status, Open SharePoint 2019 Management Shell and run: `Get-SPSolution`
+1. To remove the File Handler, firstly, we need to identify whether the application plugin has been installed on the machine or not. To identify the installation status, Open SharePoint 2019 Management Shell and run: `Get-SPSolution`
 
 ![](../../../../static/img/docs/websites/sharepoint/server/image029.png)
 
-2. If the output prompt looks like below Glasswall.FileHandler.wsp has been installed. Else we don't have any Glasswall.FileHandler.wsp installed.
+2. If the output prompt looks like below, Glasswall.FileHandler.wsp has been installed. Else, we don't have any Glasswall.FileHandler.wsp installed.
 
 ![](../../../../static/img/docs/websites/sharepoint/server/get-spsolution.png)
 
@@ -27,7 +27,7 @@ The Sharepoint Server plugin allows to delegate all download and uploads activit
     - Use Bypass to bypass the policy to get things installed or AllSigned for quite a bit more secure. Run `Set-ExecutionPolicy AllSigned` and/or `Set-ExecutionPolicy Bypass -Scope Process`.
     - Click [here](https://go.microsoft.com/fwlink/?LinkID=135170) for more information.
 
-5. Once, the cmdlet ran successfully. Validate the SharePoint Plugin running `Get-SPSolution`. This time it should not prompt any output
+5. Once, the cmdlet ran successfully, validate the SharePoint Plugin running `Get-SPSolution`. This time it should not prompt any output.
 
 ![](../../../../static/img/docs/websites/sharepoint/server/image033.png)
 

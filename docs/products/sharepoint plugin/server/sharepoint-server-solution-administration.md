@@ -11,7 +11,7 @@ sidebar_label: Sharepoint Server  Solution Administration
 2. Click on the Glasswall section on the left hand menu.
 ![](../../../../static/img/docs/websites/sharepoint/server/administration-2.png)
 
-3. Set the Glasswall Rebuild API URL & Access Key. 
+3. Set the Glasswall GW Cloud SDK URL & Access Key. 
 
 4. Save the configuration.
 ![](../../../../static/img/docs/websites/sharepoint/server/administration-3.png)

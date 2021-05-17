@@ -35,12 +35,12 @@ docker run -v $(pwd)/input:/opt -v $(pwd)/output:/home glasswallsolutions/c-icap
 
 ### Setting Up ICAP UI DNS
 - To access ICAP server management UI, a DNS entry needs to be added. Update your local hosts file 
-     - Linux/MAC: `sudo nano /etc/hosts` and add your ICAP Server IP next to `management-ui.glasswall-icap.com`, which is the default DNS.
+     - **Linux/MAC**: `sudo nano /etc/hosts` and add your ICAP Server IP next to `management-ui.glasswall-icap.com`, which is the default DNS.
        ```
        Example:
        54.194.56.16 management-ui.glasswall-icap.com
        ```
-     - WIN: open hosts file in C:\Windows\System32\drivers\etc and add the line as per example above
+     - **WIN**: open hosts file in C:\Windows\System32\drivers\etc and add the line as per example above
 
 - From your browser navigate to `https://management-ui.glasswall-icap.com`
 

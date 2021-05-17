@@ -3,7 +3,7 @@ title: Sharepoint Online Overview
 sidebar_label: Overview
 ---
 
-see [Development Websites Dashboard for details](../../../dashboards/websites/development.md)
+see [Development Websites Dashboard for details](https://github.com/k8-proxy/k8-proxy-documentation/blob/f903ef2fd3f2b274300a2c75e9f2377af7bf3eca/docs/dashboards/websites/development.md)
 
 
 # Reverse proxy configuration for saaspoc1.sharepoint.com
@@ -43,13 +43,13 @@ We needed to check the website requests to check domains of interest, (domains t
 
 ### Configuration
 
-Tweak **gwproxy.env** according to our configuration (a pre-configured file already included in the repository), This is a variables definition example: 
+Tweak **gwproxy.env** according to our configuration (a pre-configured file already included in the repository). This is a variables definition example: 
 
 - `ROOT_DOMAIN`: the domain appended to the original website domain, typically: glasswall-icap.com
 - `ALLOWED_DOMAINS` : Comma separated domains accepted by the proxy, typically this should be domains of interest (figured out in the previous step) with the `ROOT_DOMAIN` value appended
 - `ICAP_URL` : the URL of the ICAP server either running on a docker on the same machine or through a load-balancer server.
 - `SQUID_IP` IP address of squid proxy, used by nginx, should be only changed on advanced usage of the docker image (example: Kubernetes)
-- `SUBFILTER_ENV`: Space separated text substitution rules in response body, formatted as **match,replace** , used for URL rewriting as in **.gov.uk,.gov.uk.glasswall-icap.com** , but since this project doesn't apply URL rewriting it will be an empty string. 
+- `SUBFILTER_ENV`: Space separated text substitution rules in response body, formatted as **match,replace** used for URL rewriting as in **.gov.uk,.gov.uk.glasswall-icap.com**, but since this project doesn't apply URL rewriting, it will be an empty string. 
 
 ## Installation
 
@@ -116,15 +116,15 @@ Tweak **gwproxy.env** according to our configuration (a pre-configured file alre
   
   ## Client configuration
   
-- Add hosts records to your client system hosts file ( i.e **Windows**: C:\Windows\System32\drivers\etc\hosts , **Linux, macOS and  Unix-like:** /etc/hosts ) as follows
+- Add hosts records to your client system hosts file (i.e **Windows**: C:\Windows\System32\drivers\etc\hosts - **Linux, macOS and Unix-like:** /etc/hosts) as follows:
   
   ```
   127.0.0.1 saaspoc1.sharepoint.com saaspoc1-my.sharepoint.com ukc-word-edit.officeapps.live.com ukc-excel.officeapps.live.com  ukc-powerpoint.officeapps.live.com 
   ```
   
-  In case you are using a client other than machine running the project , replace **127.0.0.1** with the project host machine IP,
+  In case you are using a client other than machine running the project, replace **127.0.0.1** with the project host machine IP.
   
-  make sure that tcp ports **80** and **443** are reachable and not blocked by firewall.
+  Make sure that tcp ports **80** and **443** are reachable and not blocked by firewall.
   
   * Move ***k8-reverse-proxy/stable-src/ca.pem*** to your client machine and add it to your browser/system ssl trust store.
   

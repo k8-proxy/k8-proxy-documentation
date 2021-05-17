@@ -40,8 +40,8 @@ In order to update settings below:
 2. AzureAd:ClientSecret - Client Secret created in App registered with Azure Active Directory 
 3. AzureAd:Domain - Domain of your O365 subscription. For e.g. glasswall.onmicrosoft.com.
 4. AzureAd:TenantId - Tenant id of your Azure Active Directory tenant.  
-5. Glasswall:BaseUrl - Base url of your Glasswall rebuild api endpoint. For e.g. https://glasswall.execute-api.us-west-2.amazonaws.com/Prod/rebuild/api
-6. Glasswall:ApiKey - Api Key to access the Glasswall rebuild api.
+5. Glasswall:BaseUrl - Base url of your Glasswall GW Cloud SDK endpoint. For e.g. https://glasswall.execute-api.us-west-2.amazonaws.com/Prod/rebuild/api
+6. Glasswall:ApiKey - Api Key to access the Glasswall GW Cloud SDK.
 
 - Option 1: Edit the [appsettings.json file](https://github.com/k8-proxy/gp-sharepoint-plugins/blob/main/Online/glasswall.o365.filehandler/Net5/src/FileHandler/src/Glasswall.O365.FileHandler.App/appsettings.json) on your web app source code and redeply the app.
 

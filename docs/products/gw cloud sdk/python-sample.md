@@ -1,15 +1,26 @@
 ---
-title: Python/PHP Code Sample
-sidebar_label: Python/PHP Code Sample
+title: Python/PHP/JS Code Sample
+sidebar_label: Python/PHP/JS Code Sample
 ---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs
+  defaultValue="python"
+  values={[
+    {label: 'Python', value: 'python'},
+    {label: 'PHP', value: 'php'},
+    {label: 'JavaScript', value:'js'},
+  ]}>
+  <TabItem value="python">
 
 # Python
 
-The following code snippets are examples of calling the Rebuild API using Python. The requests library is used to execute calls to the API.
+The following code snippets are examples of calling the GW Cloud SDK using Python. The requests library is used to execute calls to the API.
 
 ## api/rebuild/base64
-​In this example files are loaded from the OS and a request with the content type of 'application/json' is formed. The request is then sent to the API using the POST method. The JSON body also contains the content management flags.
-
+​In this example, files are loaded from the OS and a request with the content type of 'application/json' is formed. The request is then sent to the API using the POST method. 
 The rebuilt file is returned as Base64, decoded by the client and written to disk.
 
 ```
@@ -43,7 +54,7 @@ response = requests.post(
 # convert base64 encoded bytes to string
 base64_string_output = response.content.decode()
 ​
-# metadata has been removed, base64 strings differ
+# metadata has been removed, ensure base64 strings are different
 assert base64_string_input != base64_string_output
 ​
 # decode base64 string to bytes
@@ -55,7 +66,7 @@ with open("data/doc/embedded_images_12kb_gwsanitised.docx", "wb") as f:
 
 ## api/rebuild/file
 
-In this example the contents of the raw file are uploaded in a body with a content type of 'multipart/form-data'. The content management flags are serialised and sent as part of the form.
+In this example, the contents of the raw file are uploaded in a body with a content type of 'multipart/form-data'. The content management flags are serialised and sent as part of the form.
 
 The rebuilt file contents are returned to the client and written to disk.
 
@@ -109,7 +120,7 @@ for root, dirs, files in os.walk(directory):
 
 ## api/rebuild/zipfile
 
-In this example the contents of the zip file are uploaded in a body with a content type of 'application/zip'.
+In this example, the contents of the zip file are uploaded in a body with a content type of 'application/zip'.
 
 The rebuilt file contents are returned to the client and written to disk.
 
@@ -148,13 +159,16 @@ for root, dirs, files in os.walk(directory):
                 f.write(response.content)
 ```
 
+  </TabItem>
 
-# php
+  <TabItem value="php">
 
-The following code snippets are examples of calling the Rebuild API using php. The requests library is used to execute calls to the API.
+  # PHP
+
+The following code snippets are examples of calling the GW Cloud SDK using php. The requests library is used to execute calls to the API.
 
 ## api/rebuild/base64 using php
-​In this example files are loaded from the OS and a request with the content type of 'application/json' is formed. The request is then sent to the API using the POST method. The JSON body also contains the content management flags.
+​In this example, files are loaded from the OS and a request with the content type of 'application/json' is formed. The request is then sent to the API using the POST method.
 
 The rebuilt file is returned as Base64, decoded by the client and written to disk.
 
@@ -189,7 +203,7 @@ $context = stream_context_create([
     ],
 
 ]);
-//Send a file to Glasswall's Rebuild API  endpoint, returns base64 encoded bytes
+//Send a file to Glasswall's GW Cloud SDK  endpoint, returns base64 encoded bytes
 $response = file_get_contents($url, false, $context);
 if ($response === false) {
     exit("Unable to get data at $url");
@@ -202,4 +216,134 @@ if (file_put_contents($output_file_path, $base64_string_output)) {
 } else {
     echo "File downloading failed.";
 }
+```
+
+
+  </TabItem>
+
+</Tabs>
+
+
+# JavaScript
+
+ The following code snippets are examples of calling the GW Cloud SDK using JavaScript. The requests library is used to execute calls to the API.
+
+## Process File
+
+In this example, files are loaded from the OS and a request with the content type of ‘application/json’ is formed. The request is then sent to the API using the POST method.
+The rebuilt file is returned as a file, decoded by the client and written to disk.
+
+```const fs = require('fs');
+const request = require('request');
+​
+const apiUrl = 'https://<host>:<port>/api/rebuild/file';
+const inputFilePath = './data/gw.pdf';
+const cleanFilePath = './data/clean.pdf';
+​
+const processFile = async () => {
+    return new Promise(function (resolve, reject) {
+        const options = {
+            method: "POST",
+            url: apiUrl,
+            headers: {
+                "Content-Type": "multipart/form-data"
+            },
+            formData: {
+                "file": fs.createReadStream(inputFilePath)
+            },
+            encoding: null
+        };
+​
+        request(options, function (err, res, response) {
+            if (!err && res.statusCode == 200) {
+                fs.writeFileSync(cleanFilePath, response);
+                resolve(true);
+            } else {
+                reject(err);
+            }
+        });
+    });
+}
+​
+module.exports = { processFile };
+```
+## Process Zip
+
+In this example, files are loaded from the OS and a request with the content type of ‘application/json’ is formed. The request is then sent to the API using the POST method.
+The rebuilt file is returned as zip file, decoded by the client and written to disk.
+```
+const fs = require('fs');
+const request = require('request');
+​
+const apiUrl = 'https://<host>:<port>/api/rebuild/zipfile';
+const inputFilePath = './data/gw.zip';
+const cleanFilePath = './data/clean.zip';
+​
+const processZip = async () => {
+    return new Promise(function (resolve, reject) {
+        const options = {
+            method: "POST",
+            url: apiUrl,
+            headers: {
+                "Content-Type": "multipart/form-data"
+            },
+            formData: {
+                "file": fs.createReadStream(inputFilePath)
+            },
+            encoding: null
+        };
+​
+        request(options, function (err, res, response) {
+            if (!err && res.statusCode == 200) {
+                fs.writeFileSync(cleanFilePath, response);
+                resolve(true);
+            } else {
+                reject(err);
+            }
+        });
+    });
+}
+​
+module.exports = { processZip };
+```
+## Process Base64
+
+In this example, files are loaded from the OS and a request with the content type of ‘application/json’ is formed. The request is then sent to the API using the POST method.
+The rebuilt file is returned as Base64, decoded by the client and written to disk.
+
+```
+const fs = require('fs');
+const request = require('request');
+​
+const apiUrl = 'https://<host>:<port>/api/rebuild/base64';
+const inputFilePath = './data/gw.pdf';
+const cleanFilePath = './data/clean.pdf';
+​
+const processBase64 = async () => {
+    return new Promise(function (resolve, reject) {
+        const contents = fs.readFileSync(inputFilePath, { encoding: 'base64' });
+        const options = {
+            method: "POST",
+            url: apiUrl,
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: {
+                base64: contents
+            },
+            json: true
+        };
+​
+        request(options, function (err, res, response) {
+            if (!err && res.statusCode == 200) {
+                fs.writeFileSync(cleanFilePath, response, { encoding: 'base64' });
+                resolve(true);
+            } else {
+                reject(err);
+            }
+        });
+    });
+}
+​
+module.exports = { processBase64 };
 ```
