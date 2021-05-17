@@ -66,7 +66,7 @@ with open("data/doc/embedded_images_12kb_gwsanitised.docx", "wb") as f:
 
 ## api/rebuild/file
 
-In this example, the contents of the raw file are uploaded in a body with a content type of 'multipart/form-data'. The content management flags are serialised and sent as part of the form.
+In this example, the contents of the raw file are uploaded in a body with a content type of 'multipart/form-data'.
 
 The rebuilt file contents are returned to the client and written to disk.
 
@@ -182,13 +182,8 @@ $output_file_path = "YOUR/OUTPUT/FILE.docx";
 // convert base64 encoded bytes to string
 $base64 = base64_encode(file_get_contents($Input_File));
 $data = [
-    'Base64' => $base64,
-    'ContentManagementFlags' => [
-        'WordContentManagement' => [
-            'ReviewComments' => '0'
-        ],
-    ]
-];
+    'Base64' => $base64
+   ];
 $json_data = json_encode($data);
 // create  context 
 $context = stream_context_create([
