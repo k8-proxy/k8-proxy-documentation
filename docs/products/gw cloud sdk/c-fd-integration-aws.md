@@ -146,7 +146,7 @@ sidebar_label: FileDrop Integration AWS
     
 - To see more details on traffic you are generating you can access Elastic or Grafana
 - For Elastic from browser navigate to `http://<SC VM IP>:5601`
-   - From settings choose `Discover` and select one of three options for logs (kubespray*, kubernetes* or other*)
+   - From settings choose `Discover` and select one of three options for logs (kubeaudit*, kubernetes* or other*)
    
         ![image](https://user-images.githubusercontent.com/70108899/116484905-53370500-a88a-11eb-8477-d55c1db73519.png)
         
