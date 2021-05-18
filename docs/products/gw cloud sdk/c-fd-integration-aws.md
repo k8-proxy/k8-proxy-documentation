@@ -33,7 +33,11 @@ sidebar_label: FileDrop Integration AWS
 
 ![image](https://user-images.githubusercontent.com/70196799/116584746-f4b86800-a917-11eb-9191-28c0edc41c29.png)
 
+ 6. Management UI: To access Management UI in your hosts file add:
 
+     ```
+     <VM IP> management-ui.glasswall-icap.com and access it from your Browser https://management-ui.glasswall-icap.com/login
+     ```
 ## How to use FileDrop
 
 - You can find information on how to use File Drop [ here ](https://k8-proxy.github.io/k8-proxy-documentation/docs/products/filedrop/fd-howto).
@@ -134,7 +138,9 @@ sidebar_label: FileDrop Integration AWS
 
     ![image](https://user-images.githubusercontent.com/70108899/116483290-13225300-a887-11eb-9187-2327fc559a47.png)
     
+- On Managment UI `https://management-ui.glasswall-icap.com/analytics` you will be able to see statistics of rebuild files, your request history and modify policies
 
+    ![image](https://user-images.githubusercontent.com/70108899/116484583-a8264b80-a889-11eb-8cdd-e06627ddf1e8.png)
     
 - To see more details on traffic you are generating you can access Elastic or Grafana
 - For Elastic from browser navigate to `http://<SC VM IP>:5601`
