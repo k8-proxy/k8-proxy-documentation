@@ -20,46 +20,41 @@ import TabItem from '@theme/TabItem';
 The following code snippets are examples of calling the GW Cloud SDK using Python. The requests library is used to execute calls to the API.
 
 ## api/rebuild/base64
-​In this example, files are loaded from the OS and a request with the content type of 'application/json' is formed. The request is then sent to the API using the POST method. 
+In this example, files are loaded from the OS and a request with the content type of 'application/json' is formed. The request is then sent to the API using the POST method. 
 The rebuilt file is returned as Base64, decoded by the client and written to disk.
 
 ```
 import base64
 import requests
-​
-​
+
+
 url = "https://<host>:<port>/api/rebuild/base64"
-​
+
 """ rebuild a single file using the base64 endpoint.
 allow (0) review comments in microsoft word files """
-​
+
 # open a local file
 with open("data/doc/embedded_images_12kb.docx", "rb") as f:
     # convert from bytes to str of base64 string
     base64_string_input = base64.b64encode(f.read()).decode()
-​
+
 # send post request to /base64 endpoint, returns base64 encoded bytes
 response = requests.post(
     url=url,
     json={
-        "Base64": base64_string_input,
-        "ContentManagementFlags": {
-            "WordContentManagement": {
-                "ReviewComments": 0,
-            }
-        }
+        "Base64": base64_string_input
     }
 )
-​
+
 # convert base64 encoded bytes to string
 base64_string_output = response.content.decode()
-​
+
 # metadata has been removed, ensure base64 strings are different
 assert base64_string_input != base64_string_output
-​
+
 # decode base64 string to bytes
 sanitised_file_bytes = base64.b64decode(base64_string_output)
-​
+
 # write file locally
 with open("data/doc/embedded_images_12kb_gwsanitised.docx", "wb") as f:
 ```
@@ -75,9 +70,9 @@ The rebuilt file contents are returned to the client and written to disk.
 import json
 import os
 import requests
-​
+
 url = "https://<host>:<port>/api/rebuild/file"
-​
+
 """ rebuild all files in the "data" directory, writing to a new "data_gwsanitised" directory with the same folder structure.
 disallow (2) excel files that contain macros and don't write them to the new directory.
 allow (0) internal and external hyperlinks found in word documents, but sanitise other content
@@ -95,19 +90,6 @@ for root, dirs, files in os.walk(directory):
                 files=[("file", f)],
                 headers={                    
                     "accept": "application/octet-stream"
-                },
-                data={
-                    "contentManagementFlagJson": json.dumps({
-                        "ExcelContentManagement": {
-                            "Macros": 2,
-                        },
-                        "WordContentManagement": {
-                            "InternalHyperlinks": 0,
-                            "ExternalHyperlinks": 0,
-                            "EmbeddedFiles": 1,
-                            "EmbeddedImages": 1,
-                        }
-                    })
                 }
             )
         if response.status_code == 200 and response.content:
@@ -129,9 +111,9 @@ The rebuilt file contents are returned to the client and written to disk.
 import json
 import os
 import requests
-​
+
 url = "https://<host>:<port>/api/rebuild/zipfile"
-​
+
 """ rebuild all files in the "data" directory, writing to a new "data_gwsanitised" directory with the same folder structure.
 disallow (2) excel files that contain macros and don't write them to the new directory.
 allow (0) internal and external hyperlinks found in word documents, but sanitise other content
@@ -168,7 +150,7 @@ for root, dirs, files in os.walk(directory):
 The following code snippets are examples of calling the GW Cloud SDK using php. The requests library is used to execute calls to the API.
 
 ## api/rebuild/base64 using php
-​In this example, files are loaded from the OS and a request with the content type of 'application/json' is formed. The request is then sent to the API using the POST method.
+In this example, files are loaded from the OS and a request with the content type of 'application/json' is formed. The request is then sent to the API using the POST method.
 
 The rebuilt file is returned as Base64, decoded by the client and written to disk.
 
@@ -230,11 +212,11 @@ The rebuilt file is returned as a file, decoded by the client and written to dis
 
 ```const fs = require('fs');
 const request = require('request');
-​
+
 const apiUrl = 'https://<host>:<port>/api/rebuild/file';
 const inputFilePath = './data/gw.pdf';
 const cleanFilePath = './data/clean.pdf';
-​
+
 const processFile = async () => {
     return new Promise(function (resolve, reject) {
         const options = {
@@ -248,7 +230,7 @@ const processFile = async () => {
             },
             encoding: null
         };
-​
+
         request(options, function (err, res, response) {
             if (!err && res.statusCode == 200) {
                 fs.writeFileSync(cleanFilePath, response);
@@ -259,7 +241,7 @@ const processFile = async () => {
         });
     });
 }
-​
+
 module.exports = { processFile };
 ```
 ## Process Zip
@@ -269,11 +251,11 @@ The rebuilt file is returned as zip file, decoded by the client and written to d
 ```
 const fs = require('fs');
 const request = require('request');
-​
+
 const apiUrl = 'https://<host>:<port>/api/rebuild/zipfile';
 const inputFilePath = './data/gw.zip';
 const cleanFilePath = './data/clean.zip';
-​
+
 const processZip = async () => {
     return new Promise(function (resolve, reject) {
         const options = {
@@ -287,7 +269,7 @@ const processZip = async () => {
             },
             encoding: null
         };
-​
+
         request(options, function (err, res, response) {
             if (!err && res.statusCode == 200) {
                 fs.writeFileSync(cleanFilePath, response);
@@ -298,7 +280,7 @@ const processZip = async () => {
         });
     });
 }
-​
+
 module.exports = { processZip };
 ```
 ## Process Base64
@@ -309,11 +291,11 @@ The rebuilt file is returned as Base64, decoded by the client and written to dis
 ```
 const fs = require('fs');
 const request = require('request');
-​
+
 const apiUrl = 'https://<host>:<port>/api/rebuild/base64';
 const inputFilePath = './data/gw.pdf';
 const cleanFilePath = './data/clean.pdf';
-​
+
 const processBase64 = async () => {
     return new Promise(function (resolve, reject) {
         const contents = fs.readFileSync(inputFilePath, { encoding: 'base64' });
@@ -328,7 +310,7 @@ const processBase64 = async () => {
             },
             json: true
         };
-​
+
         request(options, function (err, res, response) {
             if (!err && res.statusCode == 200) {
                 fs.writeFileSync(cleanFilePath, response, { encoding: 'base64' });
@@ -339,6 +321,7 @@ const processBase64 = async () => {
         });
     });
 }
-​
+
 module.exports = { processBase64 };
 ```
+
