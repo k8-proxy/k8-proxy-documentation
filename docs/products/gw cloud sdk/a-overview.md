@@ -35,21 +35,19 @@ GW Cloud SDK is a Kubernetes service that can be added to ICAP infrastructure to
 
 # Supported File Types
 
-|File Types   |File Description   |
-|---|---|
-|PDF|Adobe Portable Document|
-|JPG GIF PNG EMF WMF TIFF GeoTIFF BMP | Images|
-|DOC DOT |MS Word 97-2003 |
-| XLS XLT |MS Excel 97-2003|
-|PPT POT |MS PowerPoint 97-2003|
-|DOCX DOCM DOTX DOTM |MS Word 2003 & later|
-|XLSX XLAM XLSM XLTX XLTM | MS Excel 2003 & later |
-|XPPTX POTX POTM PPTM PPSX PPAM PPSM |MS PowerPoint 2003 & later |
-|WAV MP3 |Audio |
-|MPG MP4 |Video |
-|PE DLL MUI EXE MACH-0 COFF ELF |Portable executables |
-
-
+| File Types | File Description |
+| --- | --- |
+| PDF | Adobe Portable Document |
+| JPG GIF PNG EMF WMF TIFF GeoTIFF BMP | Images |
+| DOC DOT | MS Word 97-2003 |
+| XLS XLT | MS Excel 97-2003 |
+| PPT POT | MS PowerPoint 97-2003 |
+| DOCX DOCM DOTX DOTM | MS Word 2003 & later |
+| XLSX XLAM XLSM XLTX XLTM | MS Excel 2003 & later |
+| XPPTX POTX POTM PPTM PPSX PPAM PPSM | MS PowerPoint 2003 & later |
+| WAV MP3 | Audio |
+| MPG MP4 | Video |
+| PE DLL MUI EXE MACH-0 COFF ELF | Portable executables |
 
 # Demos
 
