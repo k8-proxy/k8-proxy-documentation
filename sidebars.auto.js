@@ -21,6 +21,7 @@ module.exports = {
                 "items": [
                     "products/gw cloud sdk/a-overview",
                     "products/gw cloud sdk/b-endpoints",
+                    "products/gw cloud sdk/bcloudsdk_dep",
                     "products/gw cloud sdk/c-fd-integration-aws",
                     "products/gw cloud sdk/c-fd-integration",
                     "products/gw cloud sdk/d-desktop-integration",
