@@ -6,7 +6,6 @@ sidebar_label: FileDrop Integration ESXi
 
 ![image](https://user-images.githubusercontent.com/60857664/115526387-4154d100-a290-11eb-8876-357a22900a0d.png)
 
-
 # Deploying compliant k8s Workload cluster OVA on ESXI
 
 1.- Have the worker cluster OVA downloaded and login to Esxi server
@@ -60,9 +59,7 @@ wizard
 
 ![image](https://user-images.githubusercontent.com/64204445/115719738-03dc6a80-a39a-11eb-93d0-39597d65e6ee.png)
 
-## How to use FileDrop
 
-- You can find information on how to use File Drop [ here ](https://k8-proxy.github.io/k8-proxy-documentation/docs/products/filedrop/fd-howto).
 
 
 
@@ -124,7 +121,7 @@ wizard
 
 - URL/ID of the Workflow cluster
 - URL/ID of the Service cluster
-- The following passwords (click [here](https://github.com/k8-proxy/cs-k8s-api/blob/main/Integration/Password-extraction) for instructions on how to extract the passwords)
+- The following passwords (click [here](https://github.com/k8-proxy/cs-k8s-api/blob/main/Integration/Passwords-extraction.md) for instructions on how to extract the passwords)
   - Monitoring password
   - Logging password
   - Kibana password
@@ -167,7 +164,14 @@ wizard
   echo "<service-cluster-ip>" > service-cluster-ip.txt
   echo "<Unique Identifier of workload instance E.g., GWSDKWC01>" > cluster.txt
  ```
-
+- Currently the below files need to be manually configured using `vi/vim`:
+ ```
+ /home/ubuntu/service-cluster-ip.txt  #Add IP of service cluster
+ /home/ubuntu/monitoring-password.txt #Add monitoring password
+ /home/ubuntu/logging-password.txt    #Add logging password
+ /home/ubuntu/cluster.txt             #Add Unique Identifier of workload instance E.g., GWSDKWC01
+ 
+ ```
 
 - Change permission of *setupscCluster.sh* running command: `chmod +x setupscCluster.sh`
 
@@ -248,7 +252,3 @@ wizard
    - `ck8s-metrics` data set is added and you can use it when creating custom dashbords
 
      ![image](https://user-images.githubusercontent.com/70108899/116485399-65fe0980-a88b-11eb-84ba-0d4e7d77c379.png)
-
-
-
-

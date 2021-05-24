@@ -198,7 +198,7 @@ if (file_put_contents($output_file_path, $base64_string_output)) {
 
   </TabItem>
 
-</Tabs>
+  <TabItem value="js">
 
 
 # JavaScript
@@ -324,4 +324,8 @@ const processBase64 = async () => {
 
 module.exports = { processBase64 };
 ```
+
+  </TabItem>
+
+</Tabs>
 
