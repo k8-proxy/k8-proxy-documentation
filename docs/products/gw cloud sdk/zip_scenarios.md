@@ -1,6 +1,6 @@
 ---
-title: Rebuilding ZIP files with Compliant Kubernetes
-sidebar_label: Rebuilding ZIP files with Compliant Kubernetes
+title: Rebuilding ZIP files 
+sidebar_label: Rebuilding ZIP files 
 ---
 
 
