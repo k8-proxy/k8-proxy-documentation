@@ -10,15 +10,15 @@
 <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","UA-165717322-1",{})</script>
 <link rel="search" type="application/opensearchdescription+xml" title="Documentation" href="/k8-proxy-documentation/opensearch.xml"><title data-react-helmet="true">FileDrop Integration AWS | Documentation</title><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"><meta data-react-helmet="true" name="docsearch:language" content="en"><meta data-react-helmet="true" name="docsearch:version" content="current"><meta data-react-helmet="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-react-helmet="true" property="og:title" content="FileDrop Integration AWS | Documentation"><meta data-react-helmet="true" name="description" content="Architecture"><meta data-react-helmet="true" property="og:description" content="Architecture"><meta data-react-helmet="true" property="og:url" content="https://k8-proxy.github.io/k8-proxy-documentation/docs/products/gw cloud sdk/c-fd-integration-aws"><link data-react-helmet="true" rel="shortcut icon" href="/k8-proxy-documentation/img/favicon.ico"><link data-react-helmet="true" rel="preconnect" href="https://BH4D9OD16A-dsn.algolia.net" crossorigin="anonymous"><link data-react-helmet="true" rel="canonical" href="https://k8-proxy.github.io/k8-proxy-documentation/docs/products/gw cloud sdk/c-fd-integration-aws"><link rel="stylesheet" href="/k8-proxy-documentation/styles.6d941e54.css">
 <link rel="preload" href="/k8-proxy-documentation/styles.b14a1395.js" as="script">
-<link rel="preload" href="/k8-proxy-documentation/runtime~main.6345c5c6.js" as="script">
+<link rel="preload" href="/k8-proxy-documentation/runtime~main.a29dff0b.js" as="script">
 <link rel="preload" href="/k8-proxy-documentation/main.323dd6fa.js" as="script">
 <link rel="preload" href="/k8-proxy-documentation/1.2606e408.js" as="script">
-<link rel="preload" href="/k8-proxy-documentation/2.dced2baa.js" as="script">
-<link rel="preload" href="/k8-proxy-documentation/39.e4ceaf0f.js" as="script">
+<link rel="preload" href="/k8-proxy-documentation/2.5dd59a29.js" as="script">
+<link rel="preload" href="/k8-proxy-documentation/39.cb5249a6.js" as="script">
 <link rel="preload" href="/k8-proxy-documentation/42.f55b652a.js" as="script">
 <link rel="preload" href="/k8-proxy-documentation/935f2afb.929c6ee3.js" as="script">
 <link rel="preload" href="/k8-proxy-documentation/17896441.929b1476.js" as="script">
-<link rel="preload" href="/k8-proxy-documentation/9a494ac5.56d95479.js" as="script">
+<link rel="preload" href="/k8-proxy-documentation/9a494ac5.19607eaf.js" as="script">
 </head>
 <body>
 <script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){var t=null;try{t=localStorage.getItem("theme")}catch(t){}return t}();t(null!==e?e:"light")}()</script><div id="__docusaurus">
@@ -30,14 +30,14 @@ Password: <code>Will be shared as part of delivery</code></p><div class="mdxCode
 </p></li><li><p>From settings choose <code>Dashboard</code> and select one of two available or create custom one. This option will give you more of a grafical overview compared to <code>Discover</code></p><p>   <img src="https://user-images.githubusercontent.com/70108899/116485151-cf314d00-a88a-11eb-99d7-b5a7e1d15a91.png" alt="image"></p></li></ul></li><li><p>For Grafana from browser navigate to <code>http://&lt;SC VM IP&gt;:3000</code></p><ul><li><p>Click on <code>Search</code> and type <code>Kubernetes / Compute Resources / Namespace (Pods)</code> and select the dashboard from search result</p><p>   <img src="https://user-images.githubusercontent.com/64204445/116515131-85c41a80-a8e9-11eb-9d98-cf26f9b6f4e4.png" alt="image">
 </p></li><li><p>Here you can switch between Workload clusters and also namespaces to see metrics</p><p>   <img src="https://user-images.githubusercontent.com/64204445/116515563-14d13280-a8ea-11eb-900b-58fe934cad07.png" alt="image"></p></li></ul></li></ul><ul><li><p><code>ck8s-metrics</code> data set is added and you can use it when creating custom dashbords</p><p>   <img src="https://user-images.githubusercontent.com/70108899/116485399-65fe0980-a88b-11eb-84ba-0d4e7d77c379.png" alt="image"></p></li></ul></div></article><div class="margin-vert--lg"><nav class="pagination-nav" aria-label="Blog list page navigation"><div class="pagination-nav__item"><a class="pagination-nav__link" href="/k8-proxy-documentation/docs/products/gw cloud sdk/bcloudsdk_dep"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">« Cloud SDK Security Architecture and Secure Deployment</div></a></div><div class="pagination-nav__item pagination-nav__item--next"><a class="pagination-nav__link" href="/k8-proxy-documentation/docs/products/gw cloud sdk/c-fd-integration"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">FileDrop Integration ESXi »</div></a></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_3SO_"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#architecture" class="table-of-contents__link">Architecture</a></li><li><a href="#deploying-workload-cluster-ami-gw-cloud-sdk-compliant-kubernetes-with-file-drop" class="table-of-contents__link">Deploying Workload cluster AMI: GW Cloud SDK compliant kubernetes with File Drop</a></li><li><a href="#how-to-use-filedrop" class="table-of-contents__link">How to use FileDrop</a></li><li><a href="#deploying-service-cluster-monitoring-cluster" class="table-of-contents__link">Deploying Service cluster (Monitoring cluster)</a><ul><li><a href="#instructions-to-integrate-service-cluster-and-workload-cluster-of-complaint-k8-cloud-sdk" class="table-of-contents__link">Instructions to integrate Service Cluster and Workload Cluster of Complaint K8 Cloud SDK</a></li></ul></li><li><a href="#validate-deployment" class="table-of-contents__link">Validate deployment</a></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container"><div class="row footer__links"><div class="col footer__col"><h4 class="footer__title">Docs</h4><ul class="footer__items"><li class="footer__item"><a class="footer__link-item" href="/k8-proxy-documentation/docs/products">Getting Started</a></li></ul></div></div><div class="text--center"><div>Copyright © 2021 Glasswall Solutions Ltd. Built with Docusaurus.</div></div></div></footer></div>
 <script src="/k8-proxy-documentation/styles.b14a1395.js"></script>
-<script src="/k8-proxy-documentation/runtime~main.6345c5c6.js"></script>
+<script src="/k8-proxy-documentation/runtime~main.a29dff0b.js"></script>
 <script src="/k8-proxy-documentation/main.323dd6fa.js"></script>
 <script src="/k8-proxy-documentation/1.2606e408.js"></script>
-<script src="/k8-proxy-documentation/2.dced2baa.js"></script>
-<script src="/k8-proxy-documentation/39.e4ceaf0f.js"></script>
+<script src="/k8-proxy-documentation/2.5dd59a29.js"></script>
+<script src="/k8-proxy-documentation/39.cb5249a6.js"></script>
 <script src="/k8-proxy-documentation/42.f55b652a.js"></script>
 <script src="/k8-proxy-documentation/935f2afb.929c6ee3.js"></script>
 <script src="/k8-proxy-documentation/17896441.929b1476.js"></script>
-<script src="/k8-proxy-documentation/9a494ac5.56d95479.js"></script>
+<script src="/k8-proxy-documentation/9a494ac5.19607eaf.js"></script>
 </body>
 </html>
