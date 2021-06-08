@@ -10,6 +10,8 @@ sidebar_label: Upgrading cs-api in an existing deployment
 - Run:
     - `sudo su`
     - `git clone -b main https://github.com/k8-proxy/cs-k8s-api && cd cs-k8s-api`
+    - `helm upgrade --install -n icap-adaptation rebuild-api --set k8s_version=1.18 infra/kubernetes/chart  --atomic`
+    
 - Example Result:
 
     ```
