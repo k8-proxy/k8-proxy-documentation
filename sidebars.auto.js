@@ -8,6 +8,13 @@ module.exports = {
             "products/a-main",
             {
                 "type": "category",
+                "label": "Compliant Kubernetes",
+                "items": [
+                    "products/compliant kubernetes/overview"
+                ]
+            },
+            {
+                "type": "category",
                 "label": "File Drop",
                 "items": [
                     "products/filedrop/fd-aws",
