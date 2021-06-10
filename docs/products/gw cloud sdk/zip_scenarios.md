@@ -8,8 +8,8 @@ sidebar_label: Rebuilding ZIP files
 All files are processed and the response returns a ZipFile with the sanitized files inside
 
 - ### Scenario-2 (Status 207)
-In this scenario the Zip file is processed, however some of the files inside it could not be processed. Nevertheless the response will return a Zip file with the sanitized files
-plus an `ErrorReport.html` for each file that could not be rebuilded.
+In this scenario the Zip file is processed, however some of the files inside could not be processed. Nevertheless the response will return a Zip file with the sanitized files
+plus an `ErrorReport.html` for each file that could not be rebuild.
 
 Example of the output from the `ErrorReport.html` is:
 
