@@ -33,6 +33,6 @@ sidebar_label: Monitoring
 - SSh into workload cluster
 - Run:
     - `sudo kubectl get pods -n ingress-nginx`
-    - `sudo kubectl logs -f -n ingress-nginx <pod name from above>`
+    - `sudo kubectl logs -f -n ingress-nginx ingress-nginx-controller-#####`
 
 - First entry is the client IP

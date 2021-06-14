@@ -5,21 +5,21 @@ sidebar_label: Compliant Kubernetes
 
 * This document is prepared from compliant kubernetes official documentation [website](https://compliantkubernetes.io/) for the sake of simplifying compliant kubernetes and demonstrating its capabilities.
 
-# [Overview](https://compliantkubernetes.io/)
-# [Kubernetes API](https://compliantkubernetes.io/user-guide/kubernetes-api/)
+## [Overview](https://compliantkubernetes.io/)
+## [Kubernetes API](https://compliantkubernetes.io/user-guide/kubernetes-api/)
 
-# [Architecture](https://compliantkubernetes.io/#architecture)
+## [Architecture](https://compliantkubernetes.io/#architecture)
 
 
-# Features
+## Features
 
-# Service Cluster
+## Service Cluster
 
-## [Elasticsearch/Kibana](https://compliantkubernetes.io/user-guide/elasticsearch/)
+### [Elasticsearch/Kibana](https://compliantkubernetes.io/user-guide/elasticsearch/)
 
-## [Prometheus/Grafana](https://compliantkubernetes.io/user-guide/prometheus/)
+### [Prometheus/Grafana](https://compliantkubernetes.io/user-guide/prometheus/)
 
-# [Backups](https://compliantkubernetes.io/operator-manual/disaster-recovery/)
+## [Backups](https://compliantkubernetes.io/operator-manual/disaster-recovery/)
 
 
 # Glasswall ICAP Adaptation Service on Compliant Kubernetes
