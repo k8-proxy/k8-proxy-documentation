@@ -23,8 +23,7 @@ Ignore Step 1 to Step 3 If you are already using `OfflineDesktop.ova`
 
 **Step 4:** Configure GW-SDK-VM endpoint in Glasswall Desktop App Setting
 
-![image](https://user-images.githubusercontent.com/60857664/115527413-52eaa880-a291-11eb-8932-a00afa904043.png)
-
+![image](https://user-images.githubusercontent.com/6232283/121910108-dd4e0680-cd2e-11eb-976b-6c7dc1f4f171.png)
 **Example Value:**
 
 ```
