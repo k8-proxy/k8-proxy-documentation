@@ -1,6 +1,6 @@
 ---
 title: Check Logs for client IP of request
-sidebar_label: Check Logs for client IP of request
+sidebar_label: Monitoring
 ---
 
 
@@ -19,13 +19,13 @@ sidebar_label: Check Logs for client IP of request
 
     ![image](https://user-images.githubusercontent.com/60857664/121915407-7a12a300-cd33-11eb-947c-e7140ce5f8f8.png)
 
-- Under `Available Fields` > click on `kubernetes.namespace_name` > Top 5 Values > click the `+` for `ingress-nginx-controller-mc885`
+- Under `Available Fields` > click on `kubernetes.namespace_name` > Top 5 Values > click the `+` for `ingress-nginx-controller-#####`
 
     ![image](https://user-images.githubusercontent.com/60857664/121915864-e7becf00-cd33-11eb-80fd-4d0192919980.png)
 
 
-- Expand a request > scroll to `message` > First entry is the IP
-    ![image](https://user-images.githubusercontent.com/60857664/121913742-f0160a80-cd31-11eb-9280-443f97d819db.png)
+- Expand a request > scroll to `message` > First entry is the client IP
+
 
 
 ## Method 2: SSH 
@@ -35,4 +35,4 @@ sidebar_label: Check Logs for client IP of request
     - `sudo kubectl get pods -n ingress-nginx`
     - `sudo kubectl logs -f -n ingress-nginx <pod name from above>`
 
-![image](https://user-images.githubusercontent.com/60857664/121916892-d7f3ba80-cd34-11eb-9aae-bcf732054f35.png)
+- First entry is the client IP

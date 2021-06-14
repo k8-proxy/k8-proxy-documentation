@@ -10,7 +10,8 @@ module.exports = {
                 "type": "category",
                 "label": "Compliant Kubernetes",
                 "items": [
-                    "products/compliant kubernetes/overview"
+                    "products/compliant kubernetes/overview",
+                    "products/compliant kubernetes/p-monitoring"
                 ]
             },
             {
@@ -31,7 +32,6 @@ module.exports = {
                     "products/gw cloud sdk/bcloudsdk_dep",
                     "products/gw cloud sdk/c-fd-integration-aws",
                     "products/gw cloud sdk/c-fd-integration",
-                    "products/gw cloud sdk/capture-ip",
                     "products/gw cloud sdk/d-desktop-integration",
                     "products/gw cloud sdk/deployment",
                     "products/gw cloud sdk/python-sample",
