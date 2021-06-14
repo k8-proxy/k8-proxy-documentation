@@ -5,10 +5,21 @@ sidebar_label: Compliant Kubernetes
 
 * This document is prepared from compliant kubernetes official documentation [website](https://compliantkubernetes.io/) for the sake of simplifying compliant kubernetes and demonstrating its capabilities.
 
-# Overview
+## [Overview](https://compliantkubernetes.io/)
+## [Kubernetes API](https://compliantkubernetes.io/user-guide/kubernetes-api/)
 
-Kubernetes is a proven technology to increase development  speed, but what about industries with heavy regulation and strong need for security , unfortunately kubernetes is not secure by default nor by itself. A lot of work needs to be done to compile it with your policies.
-Compliant Kubernetes fills this gap which is a CNCF certified kubernetes distribution which focus on compliance and information security, which integrate best open source product with best practice configuration
+## [Architecture](https://compliantkubernetes.io/#architecture)
+
+
+## Features
+
+## Service Cluster
+
+### [Elasticsearch/Kibana](https://compliantkubernetes.io/user-guide/elasticsearch/)
+
+### [Prometheus/Grafana](https://compliantkubernetes.io/user-guide/prometheus/)
+
+## [Backups](https://compliantkubernetes.io/operator-manual/disaster-recovery/)
 
 
 # Glasswall ICAP Adaptation Service on Compliant Kubernetes

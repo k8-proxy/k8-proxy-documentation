@@ -10,7 +10,8 @@ module.exports = {
                 "type": "category",
                 "label": "Compliant Kubernetes",
                 "items": [
-                    "products/compliant kubernetes/overview"
+                    "products/compliant kubernetes/overview",
+                    "products/compliant kubernetes/p-monitoring"
                 ]
             },
             {
