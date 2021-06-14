@@ -31,6 +31,7 @@ module.exports = {
                     "products/gw cloud sdk/bcloudsdk_dep",
                     "products/gw cloud sdk/c-fd-integration-aws",
                     "products/gw cloud sdk/c-fd-integration",
+                    "products/gw cloud sdk/capture-ip",
                     "products/gw cloud sdk/d-desktop-integration",
                     "products/gw cloud sdk/deployment",
                     "products/gw cloud sdk/python-sample",
