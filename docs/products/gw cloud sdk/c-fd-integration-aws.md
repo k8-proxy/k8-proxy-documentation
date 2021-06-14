@@ -22,7 +22,6 @@ sidebar_label: FileDrop Integration AWS
       - Create a new security group > Add Rule:
         - HTTP > Port 80 
         - HTTPS > Port 443 
-        - Custom TCP > Port 8080
         - SSH > Port 22
     - Click on `Review and Launch`
     - Select `Create or use existing key pair` [Note: Your key pair is important for SSH]
