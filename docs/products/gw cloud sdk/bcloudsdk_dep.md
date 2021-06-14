@@ -254,7 +254,7 @@ Automated & Manual deployments will have the following configuration:
   </tr>
 
   <tr>
-    <td>HTTPS</td>
+    <td>HTTPS/API</td>
     <td>443</td>
     <td>Workload & Service Clusters</td>
   </tr>
@@ -267,11 +267,6 @@ Automated & Manual deployments will have the following configuration:
     <td>Kibana</td>
     <td>5601</td>
     <td>Service Clusters</td>
-  </tr>
-  <tr>
-    <td>API</td>
-    <td>8080</td>
-    <td>Workload Clusters</td>
   </tr>
   <tr>
     <td colspan="3">Deny All</td>

@@ -63,7 +63,7 @@ Amazon CloudFormation launch Template is provided  in the repository to facilita
 
 
   7.- When the stack creation is complete, in the **Outputs** tab you can find:
-  * `Load Balancer DNS Name` which stand in-front of the workload cluster instances and accept requests on port `8080`
+  * `Load Balancer DNS Name` which stand in-front of the workload cluster instances and accept requests on port `80`
   * `Service Cluster IP`  that exposes Grafana on port `3000` and Kibana on port `5601`
 
 ![image](https://user-images.githubusercontent.com/70196799/116567382-dba7bb00-a907-11eb-9479-b36230e14ddb.png)

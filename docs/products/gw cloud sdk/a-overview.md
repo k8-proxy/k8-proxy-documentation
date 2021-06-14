@@ -12,7 +12,7 @@ GW Cloud SDK is a Kubernetes service that can be added to ICAP infrastructure to
 - Implemented as a K8s service
 - Easy to deploy within ICAP Service cluster
 - Interacts with Adaptation Service with RabbitMQ
-- Accessible on :8080
+- Accessible on : http/80 & https/443
 
 ## Architecture Diagram
 
