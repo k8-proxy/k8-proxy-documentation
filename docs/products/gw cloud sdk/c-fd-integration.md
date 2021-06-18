@@ -147,11 +147,11 @@ wizard
    /home/ubuntu/setupscCluster.sh
   ```
 
-- In case you are missing `setupscCluster.sh` run: 
-
-  ```
-  wget https://raw.githubusercontent.com/k8-proxy/vmware-scripts/cs-api-ck8/packer/setupscCluster.sh
-  ```
+- In case you are missing `wc-coredns-configmap.yml`, `setupscCluster.sh` run: 
+   ```
+   wget https://raw.githubusercontent.com/k8-proxy/vmware-scripts/cs-api-ck8/packer/wc-coredns-configmap.yml
+   wget https://raw.githubusercontent.com/k8-proxy/vmware-scripts/cs-api-ck8/packer/setupscCluster.sh
+   ```
 
 - In case you are missing the rest of the files also, create and edit them using commands below. **Note: Please replace placeholders**
 
