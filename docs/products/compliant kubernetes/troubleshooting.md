@@ -50,3 +50,9 @@ In message field, we can find id of file...something like: `Returning 'GW_FAILED
 3. Copy the id and search using id "`f9e0dc38-0a00-4a8e-93e9-b3e055d1836e`"
 4. Focus on `message ` filed of logs with fileid 
 5.  One can find reason of failure of rebuilt. e.g., `Filetype Detected: Unknown`
+
+## What happens to data when Worker Cluster is deleted?
+
+By default all logs & metrics are collected from running worker cluster and stored in service cluster so deleting a worker cluster doesn't cause data loss.
+If, for some reason, the worker cluster can't communicate/reach the service cluster the logs are temporary saved on the worker cluster (configurable amount of GB) until the service cluster is back online.
+For more info, please check [Compliant Kubernetes Overview](https://k8-proxy.github.io/k8-proxy-documentation/docs/products/compliant%20kubernetes/overview)
