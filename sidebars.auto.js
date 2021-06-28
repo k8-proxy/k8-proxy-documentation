@@ -35,6 +35,7 @@ module.exports = {
                     "products/gw cloud sdk/c-fd-integration",
                     "products/gw cloud sdk/d-desktop-integration",
                     "products/gw cloud sdk/deployment",
+                    "products/gw cloud sdk/features",
                     "products/gw cloud sdk/python-sample",
                     "products/gw cloud sdk/upgrade",
                     "products/gw cloud sdk/zip_scenarios"
