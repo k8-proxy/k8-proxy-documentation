@@ -37,7 +37,8 @@ module.exports = {
                     "products/gw cloud sdk/deployment",
                     "products/gw cloud sdk/python-sample",
                     "products/gw cloud sdk/upgrade",
-                    "products/gw cloud sdk/zip_scenarios"
+                    "products/gw cloud sdk/zip_scenarios",
+                    "products/gw cloud sdk/zother-features"
                 ]
             },
             {
