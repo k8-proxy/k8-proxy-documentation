@@ -278,16 +278,12 @@ Automated & Manual deployments will have the following configuration:
 
 A summary of the recommendations for secure deployment into any cloud environment:
 
-1. Use the automated deployment script where possible.
-2. Keep only the necessary ports open (as recommended above).
-3. Enforce whitelisting of only required IPs (do not use 0.0.0.0/0)
-4. Use a WAF
-5. Harden your cloud environment with security benchmarks (i.e. CIS). We recommend reviewing
-    all the security settings in the account and ensuring that secure defaults have not been changed
-    to less secure settings and that the most secure settings are used in areas that do not default to
-    secure. This will help to identify and remediate weaknesses in the account's configuration and
-    can be amended to cloud security standards.
-6. Monitor the cloud environment for any security events with a SIEM
+1. Secure deployment is implemented using Cloudformation template
+2. Ports are restrictricted and ports which requires explicit inbound rules are allowed in Security groups
+3. Cloudformation template supports supplying of custom CIDR which will be used as source for inbound rules in Security groups. This will help in preventing exposing of service to wide internet.
+4. Secure deployment model deploys AWS WAF with AWS managed rules which helps in preventing spam traffic and protection against known bad inputs
+5. As part of Cloudformation based Secure deployment, All the traffic from end user/service to loadbalancer is encrypted using SSL certificate. Any traffic to plain HTTP port will be redirected to HTTPS with 302 status code. 
+6. Logs of all workload clusters are collected and monitored using Grafana and Kibana present in Service clusters. 
 
 # Version History and Review
 
