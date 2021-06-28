@@ -1,39 +1,7 @@
 ---
-title: v3.0 vs v2.0 Features
-sidebar_label: v3.0 vs v2.0 Features
+title: Other Features
+sidebar_label: Other Features
 ---
-
-## Possible messages
-
-```
-UNPROCESSABLE,
-CLEAN,
-CLEANED,
-INTERNAL_ERROR,
-EXPIRED
-```
-
-### UNPROCESSABLE
-
-You will see UNPROCESSABLE when the file is not supported from the engine or the engine can't rebuild it.
-
-![image](https://user-images.githubusercontent.com/60857664/123620628-bbfb1900-d80a-11eb-9da7-78648f43d0f6.png)
-
-### EXPIRED
-
-You will see the `EXPIRED` when the GW Engine license has expired.
-
-### INTERNAL_ERROR
-
-You will see the INTERNAL_ERROR when there was an error in Minio-ICAP processing.
-
-### CLEANED
-
-You will see CLEANED when file is rebuild successfully
-![image](https://user-images.githubusercontent.com/60857664/123620936-04b2d200-d80b-11eb-9be2-a5a6a5021516.png)
-
-### CLEAN
-This means that file is already clean
 
 ## Jaeger
 
