@@ -60,26 +60,26 @@ INTERNAL_ERROR,
 EXPIRED
 ```
 
-### UNPROCESSABLE
+#### UNPROCESSABLE
 
 You will see UNPROCESSABLE when the file is not supported from the engine or the engine can't rebuild it.
 
 ![image](https://user-images.githubusercontent.com/60857664/123620628-bbfb1900-d80a-11eb-9da7-78648f43d0f6.png)
 
-### EXPIRED
+#### EXPIRED
 
 You will see the `EXPIRED` when the GW Engine license has expired.
 
-### INTERNAL_ERROR
+#### INTERNAL_ERROR
 
 You will see the INTERNAL_ERROR when there was an error in Minio-ICAP processing.
 
-### CLEANED
+#### CLEANED
 
 You will see CLEANED when file is rebuild successfully
 ![image](https://user-images.githubusercontent.com/60857664/123620936-04b2d200-d80b-11eb-9be2-a5a6a5021516.png)
 
-### CLEAN
+#### CLEAN
 This means that file is already clean
 
 # Demos
