@@ -61,6 +61,14 @@ Amazon CloudFormation launch Template is provided  in the repository to facilita
 
 ![image](https://user-images.githubusercontent.com/70196799/116566498-1ceb9b00-a907-11eb-8394-5ac9ab94eaec.png)
 
+  7.- **Other Paramters** 
+   * `SecurityGroupInboundCIDR`  CIDR Range of IP address from which connections to all instnaces in this stack are to be allowed. If this stack is for testing, it is recommended to allow only specific ip. E.g., `100.100.100.100/32` where `100.100.100.100` is public ip of your network which can be checked by visiting https://www.google.com/search?q=what+is+my+ip. If it is absolutely required for this stack to be open to public internet, `0.0.0.0/0` to be supplied as InboundCIDR. 
+
+  * `StackOwner` Owner of current CloudFormation stack who can be contacted for any information required. 
+
+![image](https://user-images.githubusercontent.com/17300331/123956860-c9f69880-d9c8-11eb-8fb2-b9e9825d1db1.png)
+
+
 
   7.- When the stack creation is complete, in the **Outputs** tab you can find:
   * `Load Balancer DNS Name` which stand in-front of the workload cluster instances and accept requests on port `80`
