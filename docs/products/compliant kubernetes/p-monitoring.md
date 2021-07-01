@@ -19,7 +19,7 @@ sidebar_label: Monitoring
 
     ![image](https://user-images.githubusercontent.com/60857664/121915407-7a12a300-cd33-11eb-947c-e7140ce5f8f8.png)
 
-- Under `Available Fields` > click on `kubernetes.namespace_name` > Top 5 Values > click the `+` for `ingress-nginx-controller-#####`
+- Under `Available Fields` > click on `kubernetes.pod_name` > Top 5 Values > click the `+` for `ingress-nginx-controller-#####`
 
     ![image](https://user-images.githubusercontent.com/60857664/121915864-e7becf00-cd33-11eb-80fd-4d0192919980.png)
 
