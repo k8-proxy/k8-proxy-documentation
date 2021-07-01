@@ -4,7 +4,7 @@ sidebar_label: Endpoints
 ---
 
 ## Glasswall File Rebuild Product API (Swagger)
-https://k8-proxy.github.io/cs-k8s-api/#/
+https://cloud-sdk.glasswallsolutions.com/swagger/index.html
 
 ## Endpoints available
 
