@@ -223,16 +223,16 @@ sensitive.
 # Secure Deployment 
 Below demonstrates the steps to securely deploy GW Cloud SDK into AWS. Recommendations for
 deployment on the workload cluster is to enable only Port 443, and close out all other ports.
-It is recommended to deny public access to the ICAP Server, to avoid possible denial of service attacks.
+It is recommended to deny public access to the ICAP Server, to avoid possible denial of service attacks. The RabbitMQ credentials should be changed from default after installation.
+
 Whitelisting only dedicated IPs and avoiding the use of is strongly recommended by the Glasswall
-InfoSec Team. Using the SSH port 22 is recommended only for essential maintenance/troubleshooting.
+InfoSec Team. Using the SSH port 22 is recommended only for essential maintenance/troubleshooting and access should be obtained only using SSH keys, not a password.
+
 
 Deployment on the monitoring cluster enables Grafana/Kibana default ports in automated
 deployments. It is recommended to whitelist access to these ports from specific IPs. We recommend
 using a central logging location (i.e. Elasticsearch) to enable the plug in of a SIEM (Security Information
-and Event Management) service for security monitoring and alerting. If deployed into the Glasswall
-AWS Environment DataDog will be used as a SIEM by the Glasswall InfoSec team, to detect possible
-intrusions and security compromises.
+and Event Management) service for security monitoring and alerting. If deployed into the Glasswall AWS Environment Lacework will be used as an IDS by the Glasswall InfoSec team, to detect possible intrusions and security compromises. The CloudFormation template (for AWS) provided contains the deployment of Lacework agent, which can be leveraged at the customer preference.
 
 Installed in front of the load balancer we highly recommend installing a WAF (Web Application
 Firewall). This should be configured to block traffic to ports and offer protection against SQL
