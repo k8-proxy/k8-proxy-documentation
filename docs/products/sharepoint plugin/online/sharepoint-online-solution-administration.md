@@ -57,9 +57,3 @@ In order to update settings below:
   
 - Option 3: Use your cloud service configuration editor UI to update the relevant properties 
 - Doc for [azure](https://docs.microsoft.com/en-us/azure/app-service/configure-common)
-
-
-## Resources
-
-
-
