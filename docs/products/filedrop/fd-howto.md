@@ -4,10 +4,10 @@ sidebar_label: How to use File Drop
 ---
 
 ### Glasswall Web App Architecture diagram
-<img width="923" alt="Screenshot 2021-07-12 at 10 59 16" src="https://user-images.githubusercontent.com/70196799/125266392-149bdd00-e306-11eb-8757-1385a9d2f35d.png">
+![](https://user-images.githubusercontent.com/70196799/125266392-149bdd00-e306-11eb-8757-1385a9d2f35d.png)
 
 ### Glasswall Web App Data Flow diagram
-<img width="565" alt="Screenshot 2021-07-12 at 11 42 04" src="https://user-images.githubusercontent.com/70196799/125266572-3b5a1380-e306-11eb-978a-404095c83e83.png">
+![](https://user-images.githubusercontent.com/70196799/125266572-3b5a1380-e306-11eb-978a-404095c83e83.png)
 
 
 ### Demo Video
