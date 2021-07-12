@@ -9,7 +9,7 @@ sidebar_label: Sharepoint Online Solution Administration
 ![](https://user-images.githubusercontent.com/70196799/125265716-6859f680-e305-11eb-81f0-faf2bad90580.png)
 
 ### Glasswall Sharepoint Sequence Diagram
-![](src="https://user-images.githubusercontent.com/70196799/125266245-ed451000-e305-11eb-8474-c6bafed39c16.png)
+![](https://user-images.githubusercontent.com/70196799/125266245-ed451000-e305-11eb-8474-c6bafed39c16.png)
 
 
 ### Configure Hide Download Extension Solution
