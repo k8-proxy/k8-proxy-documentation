@@ -6,10 +6,10 @@ sidebar_label: Sharepoint Online Solution Administration
 ## GW SPO Extension Administration
 
 ### Glasswall Sharepoint Plug-in Online
-<img width="1155" alt="Screenshot 2021-07-12 at 10 58 53" src="https://user-images.githubusercontent.com/70196799/125265716-6859f680-e305-11eb-81f0-faf2bad90580.png">
+![](https://user-images.githubusercontent.com/70196799/125265716-6859f680-e305-11eb-81f0-faf2bad90580.png)
 
 ### Glasswall Sharepoint Sequence Diagram
-<img width="1131" alt="Screenshot 2021-07-12 at 10 59 09" src="https://user-images.githubusercontent.com/70196799/125266245-ed451000-e305-11eb-8474-c6bafed39c16.png">
+![](src="https://user-images.githubusercontent.com/70196799/125266245-ed451000-e305-11eb-8474-c6bafed39c16.png)
 
 
 ### Configure Hide Download Extension Solution
