@@ -56,4 +56,4 @@ In order to update settings below:
 - Option 2: Manually edit the [appsettings.json file](https://github.com/k8-proxy/gp-sharepoint-plugins/blob/main/Online/glasswall.o365.filehandler/Net5/src/FileHandler/src/Glasswall.O365.FileHandler.App/appsettings.json) on your deployed web app.
   
 - Option 3: Use your cloud service configuration editor UI to update the relevant properties 
-- Doc for [azure](https://docs.microsoft.com/en-us/azure/app-service/configure-common)
+- Doc for [azure](https://docs.microsoft.com/en-us/azure/app-service/configure-common).
