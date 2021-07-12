@@ -3,6 +3,9 @@ title: Sharepoint Server Solution Administration
 sidebar_label: Sharepoint Server  Solution Administration
 ---
 
+### Glasswall Sharepoint Plug-in Server 
+<img width="844" alt="Screenshot 2021-07-12 at 10 59 01" src="https://user-images.githubusercontent.com/70196799/125265915-93dce100-e305-11eb-8b44-96c6fdf02d34.png">
+
 
 ### Configuration
 1. Navigate to Central Administration Site of your SharePoint Server instance.
